@@ -1,0 +1,104 @@
+package myjava;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+
+public class Login extends JFrame implements ActionListener{
+	JButton rules,back;
+	JTextField tfname;
+	Login()
+	{
+		//BackgroundColor
+		getContentPane().setBackground(Color.white);
+		
+		setLayout(null);
+		
+		ImageIcon logoIcon = new ImageIcon(Login.class.getResource("/images/unnamed.png"));
+        setIconImage(logoIcon.getImage());
+        setTitle("Java Quiz");
+		
+		//Image
+		ImageIcon i1 = new ImageIcon(Login.class.getResource("/images/login.jpeg"));
+		JLabel image=new JLabel(i1);
+		add(image);
+		image.setBounds(0,0,600,520);
+		
+		
+		//Heading
+		JLabel heading=new JLabel("Quiz Master");
+		heading.setBounds(785,60,300,45);
+		heading.setFont(new Font("Times New Roman",Font.ITALIC,40));
+		heading.setForeground(Color.BLUE);
+		add(heading);
+
+		
+		//Name
+		JLabel name=new JLabel("Enter Your Name:");
+		name.setBounds(815,150,300,20);
+		name.setFont(new Font("Mongolian Baiti",Font.BOLD,18));
+		name.setForeground(Color.BLUE);
+		add(name);
+		
+		
+		tfname = new JTextField();
+		tfname.setBounds(735,200,300,25);
+		tfname.setFont(new Font("Times New Roman",Font.BOLD,20));
+		add(tfname);
+		
+		
+		rules = new JButton("Rules");
+		rules.setBounds(735,270,120,25);
+		rules.setBackground(new Color(30,144,254));
+		rules.setForeground(Color.white);
+		rules.addActionListener(this);
+		add(rules);
+		
+		
+		
+
+		back = new JButton("Back");
+		back.setBounds(915,270,120,25);
+		back.setBackground(new Color(30,144,254));
+		back.setForeground(Color.white);
+		back.addActionListener(this);
+		add(back);
+		
+		
+		//frame size and location
+		setLocation(200,150);
+		setSize(1200,500);
+		setVisible(true);
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		if(e.getSource()==rules)
+		{	
+			String name=tfname.getText();
+			if(name.isEmpty())
+				name="Guest User";
+			setVisible(false);
+			new Rules(name);
+		}
+		else if(e.getSource()==back)
+		{
+			setVisible(false);
+		}
+		
+		
+	}
+	
+	
+	public static void main(String args[])
+	{
+		Login l=new Login();
+		
+	}
+
+
+
+}
