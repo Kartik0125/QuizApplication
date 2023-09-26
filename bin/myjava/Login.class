@@ -1,0 +1,54 @@
+Êþº¾   ? ½   myjava/Login   javax/swing/JFrame   java/awt/event/ActionListener rules Ljavax/swing/JButton; back tfname Ljavax/swing/JTextField; <init> ()V Code
+    
+     getContentPane ()Ljava/awt/Container;	     java/awt/Color   white Ljava/awt/Color;
+     java/awt/Container    
+setBackground (Ljava/awt/Color;)V
+  " # $ 	setLayout (Ljava/awt/LayoutManager;)V  & javax/swing/ImageIcon ( /images/unnamed.png
+ * ,  + java/lang/Class - . 
+getResource "(Ljava/lang/String;)Ljava/net/URL;
+ % 0  1 (Ljava/net/URL;)V
+ % 3 4 5 getImage ()Ljava/awt/Image;
+  7 8 9 setIconImage (Ljava/awt/Image;)V ; 	Java Quiz
+  = > ? setTitle (Ljava/lang/String;)V A /images/login.jpeg  C javax/swing/JLabel
+ B E  F (Ljavax/swing/Icon;)V
+  H I J add *(Ljava/awt/Component;)Ljava/awt/Component;
+ B L M N 	setBounds  (IIII)V P 
+Quiz Master
+ B R  ?  T 
+java/awt/Font V Times New Roman
+ S X  Y (Ljava/lang/String;II)V
+ B [ \ ]  setFont (Ljava/awt/Font;)V	  _ `  BLUE
+ B b c   
+setForeground e Enter Your Name: g Mongolian Baiti  i javax/swing/JTextField
+ h 	  l 
+ 
+
+ h L
+ h [  p javax/swing/JButton r Rules
+ o R	  u   
+ o L
+  x  y (III)V
+ o 
+ o b
+ o } ~  addActionListener "(Ljava/awt/event/ActionListener;)V  Back	  ƒ 	 
+  … † ‡ 
+setLocation (II)V
+  ‰ Š ‡  setSize
+  Œ  Ž 
+setVisible (Z)V LineNumberTable LocalVariableTable this Lmyjava/Login; logoIcon Ljavax/swing/ImageIcon; i1 image Ljavax/swing/JLabel;  heading name actionPerformed (Ljava/awt/event/ActionEvent;)V
+  Ÿ  ž java/awt/event/ActionEvent   ¡ 	getSource ()Ljava/lang/Object;
+ h £ ¤ ¥  getText ()Ljava/lang/String;
+ § ©  ¨ java/lang/String ª «  isEmpty ()Z ­ 
+Guest User  ¯ myjava/Rules
+ ® R e Ljava/awt/event/ActionEvent; Ljava/lang/String; 
+StackMapTable main ([Ljava/lang/String;)V
+   args [Ljava/lang/String; l 
+SourceFile 
+Login.java !               	      
+ 
+       
+    ¸    À*· *¶ ² ¶ *¶ !» %Y'¶ )· /L*+¶ 2¶ 6*:¶ <» %Y@¶ )· /M» BY,· DN*-¶ GW-X¶ K» BYO· Q:<,-¶ K» SYU(· W¶ Z² ^¶ a*¶ GW» BYd· Q:/ –,¶ K» SYf· W¶ Z² ^¶ a*¶ GW*» hY· jµ k*´ kß È,¶ m*´ k» SYU· W¶ n**´ k¶ GW*» oYq· sµ t*´ tßx¶ v*´ t» Y  þ· w¶ z*´ t² ¶ {*´ t*¶ |**´ t¶ GW*» oY€· sµ ‚*´ ‚“x¶ v*´ ‚» Y  þ· w¶ z*´ ‚² ¶ {*´ ‚*¶ |**´ ‚¶ GW* È –¶ „*°ô¶ ˆ*¶ ‹±       ¢ (   
+       "  *  0  ?  H  N  Z   e ! t " … #  $ ” ( Ÿ ) ¯ * À + È , Ï / Ú 0 ì 1 ÿ 2 5 6& 7< 8F 9N :W ?d @u A‹ B• C D¦ H° Iº J¿ K    >   À ‘ ’   "ž “ ”  ? • ”  Hx – —  e[ ˜ —  Ÿ! ™ —   š ›     ±     =+¶ œ*´ t¦ $*´ k¶ ¢M,¶ ¦™ ¬M*¶ ‹» ®,· °§ +¶ œ*´ ‚¦ *¶ ‹±       * 
+   O 
+ Q  R  S  T " U ) V , W 7 Y < ]         = ‘ ’     = ± ²    ™ ³  ´    ü   §ú  	 µ ¶     A     	» Y· ·L±       
+    b  d        	 ¸ ¹     º ’   »    ¼
